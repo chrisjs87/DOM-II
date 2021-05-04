@@ -59,3 +59,13 @@ function movingMouseIntro(event){
 }
 const introText = document.querySelector('.intro');
 introText.addEventListener('mousemove', movingMouseIntro);
+
+//mouseover event
+function mouseOverMidText(event){
+    event.target.style.color = 'red';
+    setTimeout(function(){
+        event.target.style.color = 'black';
+    }, 5000);
+}
+const midText = document.querySelector('.text-content');
+midText.addEventListener('mouseover', mouseOverMidText);
