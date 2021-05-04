@@ -34,7 +34,9 @@ navC.addEventListener('click', navClick);
 
 //escape key event listener
 function leavePage(event){
-    alert('Are you sure you want to leave?');
+    if(event.key === 'Escape'){
+        alert('Are you sure you want to leave?');
+    }  
 }
 document.addEventListener('keydown', leavePage);
 
@@ -69,3 +71,10 @@ function mouseOverMidText(event){
 }
 const midText = document.querySelector('.text-content');
 midText.addEventListener('mouseover', mouseOverMidText);
+
+//keyup event
+document.addEventListener("keyup", event => {
+    if (event.key === 'a') {
+        alert('You found the secret key');
+      }
+});
