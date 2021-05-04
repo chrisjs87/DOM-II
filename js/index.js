@@ -38,25 +38,14 @@ function leavePage(event){
 }
 document.addEventListener('keydown', leavePage);
 
-//select event listener
-
-// function pageTextSelected(event){
-//     alert('You have selected text on the page');
-// }
-
-// document.addEventListener('select', pageTextSelected);
-
 //load listener, alert user
 function loadAlert(event){
     alert('The page has loaded');
 }
 window.addEventListener('load', loadAlert);
 
-
-
-
-
-
-
-
-
+//double click event
+function doubleClickAlert(event){
+    alert(`You have double clicked the page`)
+}
+document.addEventListener('dblclick', doubleClickAlert);
