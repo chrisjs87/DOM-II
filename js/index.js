@@ -49,3 +49,13 @@ function doubleClickAlert(event){
     alert(`You have double clicked the page`)
 }
 document.addEventListener('dblclick', doubleClickAlert);
+
+//mousemove event
+function movingMouseIntro(event){
+    event.target.style.color = 'red';
+    setTimeout(function(){
+        event.target.style.color = 'black';
+    }, 1);
+}
+const introText = document.querySelector('.intro');
+introText.addEventListener('mousemove', movingMouseIntro);
