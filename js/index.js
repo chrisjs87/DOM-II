@@ -1,5 +1,5 @@
 
-//nav hover color change
+//nav functionality
 function navHover(event){
     event.target.style.color = 'blue';
     event.target.style.border = '2px solid black';
@@ -31,3 +31,10 @@ navH.addEventListener('click', navClick);
 navA.addEventListener('click', navClick);
 navB.addEventListener('click', navClick);
 navC.addEventListener('click', navClick);
+
+//escape key event listener
+function leavePage(event){
+    alert('Are you sure you want to leave?');
+}
+document.addEventListener('keydown', leavePage);
+
