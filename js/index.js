@@ -2,9 +2,16 @@
 //nav hover color change
 function navHover(event){
     event.target.style.color = 'blue';
+    event.target.style.border = '2px solid black';
+    event.target.style.padding = '4px';
 }
 function navLeave(event){
     event.target.style.color = 'black';
+    event.target.style.border = '0';
+    event.target.style.padding = '0';
+}
+function navClick(event){
+    event.target.style.color = 'purple';
 }
 
 const navH = document.querySelector('nav :nth-child(1)');
@@ -20,7 +27,7 @@ navH.addEventListener('mouseleave', navLeave);
 navA.addEventListener('mouseleave', navLeave);
 navB.addEventListener('mouseleave', navLeave);
 navC.addEventListener('mouseleave', navLeave);
-
-
-// const test = Array.from(document.querySelector('nav'));
-// console.log(test);
+navH.addEventListener('click', navClick);
+navA.addEventListener('click', navClick);
+navB.addEventListener('click', navClick);
+navC.addEventListener('click', navClick);
