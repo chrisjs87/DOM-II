@@ -78,3 +78,14 @@ document.addEventListener("keyup", event => {
         alert('You found the secret key');
       }
 });
+
+let topNav = document.querySelector('.nav-container');
+
+//scroll event
+document.addEventListener('scroll', (event) => {
+    topNav.style.backgroundColor = 'red';
+
+    setTimeout(function(){
+        topNav.style.backgroundColor = 'white';
+    }, 1);
+});
