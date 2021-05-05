@@ -89,3 +89,16 @@ document.addEventListener('scroll', (event) => {
         topNav.style.backgroundColor = 'white';
     }, 1);
 });
+
+//default functionality of clicking links prevented
+Array.from(document.links).forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+    });
+  });
+
+//example of stopping bubbling
+Array.from(document.all).forEach(item => item.addEventListener('click', event => {
+    alert(`Here is the tag you have clicked on: ${event.currentTarget.nodeName}`);
+    event.stopPropagation();
+}));
